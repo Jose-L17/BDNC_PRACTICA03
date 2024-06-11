@@ -1,33 +1,23 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Frontangular</title>
+  <title>Front_joseluis</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <div class="container">
     <div class="header">
       <h1>Personas</h1>
     </div>
-    <button type="button" (click)="addPersona()">
-      <i class="fas fa-plus"></i> Agregar
-    </button>
-    <button type="button" (click)="updatePersona()">
-      <i class="fas fa-edit"></i> Actualizar
-    </button>
-    <button type="button" (click)="deletePersona(currentPersona.id)">
-      <i class="fas fa-trash-alt"></i> Eliminar
-    </button>
-    <button type="button" (click)="buscarPersona()">
-      <i class="fas fa-search"></i> Buscar
-    </button>
-    <button type="button" (click)="cancelEdit()">
-      <i class="fas fa-times"></i> Cancelar
-    </button>  
+    <button type="button" (click)="addPersona()">Agrega</button>
+    <button type="button" (click)="updatePersona()">Actualizar</button>
+    <button type="button" (click)="deletePersona(currentPersona.id)">Eliminar</button>
+    <button type="button" (click)="buscarPersona()">Buscar</button>
+   
     <form class="form-row">
       <div class="form-group">
         <label for="id">ID:</label>
@@ -62,7 +52,6 @@
           <td>{{ persona.nombre }}</td>
           <td>{{ persona.direccion }}</td>
           <td>{{ persona.telefono }}</td>
-          
         </tr>
       </tbody>
     </table>

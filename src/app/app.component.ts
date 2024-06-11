@@ -10,6 +10,7 @@ import { Persona } from './models/persona.model';
 export class AppComponent implements OnInit {
   personas: Persona[] = [];
   currentPersona: Persona = { id: '', nombre: '', direccion: '', telefono: '' };
+  mostrarTabla: boolean = false;
 
   constructor(private personaService: PersonaService) {}
 
@@ -54,6 +55,11 @@ export class AppComponent implements OnInit {
   resetForm(): void {
     this.currentPersona = { id: '', nombre: '', direccion: '', telefono: '' };
   }
+
+  mostrarTablaClick() {
+    this.mostrarTabla = true;
+  }
+
   buscarPersona(): void {
     if (this.currentPersona.id) {
       this.personaService.getPersona(this.currentPersona.id).subscribe(persona => {
@@ -69,5 +75,8 @@ export class AppComponent implements OnInit {
     }
   }
 
-
+  guardarPersona(): void {
+    // Aquí puedes implementar la lógica para guardar la persona
+    this.addPersona(); // En este ejemplo simplemente se llama a la función addPersona existente
+  }
 }

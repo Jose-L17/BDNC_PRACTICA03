@@ -1,3 +1,4 @@
+
 # Usar la imagen de node como base para construir la aplicación Angular
 FROM node:latest as build
 
@@ -26,8 +27,7 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build /app/dist/frontangular/ /usr/share/nginx/html
 
 # Exponer el puerto 80
-EXPOSE 80
+EXPOSE 81
 
 # Comando para iniciar el servidor Nginx en segundo plano
 CMD ["nginx", "-g", "daemon off;"]
-
